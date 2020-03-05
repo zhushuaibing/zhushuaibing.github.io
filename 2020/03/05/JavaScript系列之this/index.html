@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+
+    
+
+    
+
+
+
+    <meta charset="utf-8">
+    
+    
+    
+    
+    <title>JavaScript系列之this | A giser&#39;s blog. | 若批评不自由，则赞美无意义，一个健全的社会不应该只有一种声音，不然那一定是谎言。</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    
+    <meta name="theme-color" content="#3F51B5">
+    
+    
+    <meta name="keywords" content="JavaScript">
+    <meta name="description" content="记录&amp;思考">
+<meta property="og:type" content="article">
+<meta property="og:title" content="JavaScript系列之this">
+<meta property="og:url" content="http://www.zhushuaibing.top/2020/03/05/JavaScript%E7%B3%BB%E5%88%97%E4%B9%8Bthis/index.html">
+<meta property="og:site_name" content="A giser&#39;s blog.">
+<meta property="og:description" content="记录&amp;思考">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-03-05T07:24:52.000Z">
+<meta property="article:modified_time" content="2020-03-05T08:31:26.083Z">
+<meta property="article:author" content="祝帅兵">
+<meta property="article:tag" content="JavaScript">
+<meta name="twitter:card" content="summary">
+    
+        <link rel="alternate" type="application/atom+xml" title="A giser&#39;s blog." href="/atom.xml">
+    
+    <link rel="shortcut icon" href="/favicon.ico">
+    <link rel="stylesheet" href="//unpkg.com/hexo-theme-material-indigo@latest/css/style.css">
+    <script>window.lazyScripts=[]</script>
+
+    <!-- custom head -->
+    
+
+<meta name="generator" content="Hexo 4.2.0"></head>
+
+<body>
+    <div id="loading" class="active"></div>
+
+    <aside id="menu" class="hide" >
+  <div class="inner flex-row-vertical">
+    <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menu-off">
+        <i class="icon icon-lg icon-close"></i>
+    </a>
+    <div class="brand-wrap" style="background-image:url(/img/brand.jpg)">
+      <div class="brand">
+        <a href="/" class="avatar waves-effect waves-circle waves-light">
+          <img src="/img/avatar.jpg">
+        </a>
+        <hgroup class="introduce">
+          <h5 class="nickname">祝帅兵</h5>
+          <a href="mailto:878023105@qq.com" title="878023105@qq.com" class="mail">878023105@qq.com</a>
+        </hgroup>
+      </div>
+    </div>
+    <div class="scroll-wrap flex-col">
+      <ul class="nav">
+        
+            <li class="waves-block waves-effect">
+              <a href="/"  >
+                <i class="icon icon-lg icon-home"></i>
+                主页
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/archives"  >
+                <i class="icon icon-lg icon-archives"></i>
+                列表
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="/tags"  >
+                <i class="icon icon-lg icon-tags"></i>
+                标签
+              </a>
+            </li>
+        
+            <li class="waves-block waves-effect">
+              <a href="https://github.com/zhushuaibing" target="_blank" >
+                <i class="icon icon-lg icon-github"></i>
+                Github
+              </a>
+            </li>
+        
+      </ul>
+    </div>
+  </div>
+</aside>
+
+    <main id="main">
+        <header class="top-header" id="header">
+    <div class="flex-row">
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light on" id="menu-toggle">
+          <i class="icon icon-lg icon-navicon"></i>
+        </a>
+        <div class="flex-col header-title ellipsis">JavaScript系列之this</div>
+        
+        <div class="search-wrap" id="search-wrap">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="back">
+                <i class="icon icon-lg icon-chevron-left"></i>
+            </a>
+            <input type="text" id="key" class="search-input" autocomplete="off" placeholder="输入感兴趣的关键字">
+            <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="search">
+                <i class="icon icon-lg icon-search"></i>
+            </a>
+        </div>
+        
+        
+        <a href="javascript:;" class="header-icon waves-effect waves-circle waves-light" id="menuShare">
+            <i class="icon icon-lg icon-share-alt"></i>
+        </a>
+        
+    </div>
+</header>
+<header class="content-header post-header">
+
+    <div class="container fade-scale">
+        <h1 class="title">JavaScript系列之this</h1>
+        <h5 class="subtitle">
+            
+                <time datetime="2020-03-05T07:24:52.000Z" itemprop="datePublished" class="page-time">
+  2020-03-05
+</time>
+
+
+            
+        </h5>
+    </div>
+
+    
+
+
+</header>
+
+
+<div class="container body-wrap">
+    
+
+<article id="post-JavaScript系列之this"
+  class="post-article article-type-post fade" itemprop="blogPost">
+
+    <div class="post-card">
+        <h1 class="post-card-title">JavaScript系列之this</h1>
+        <div class="post-meta">
+            <time class="post-time" title="2020-03-05 15:24:52" datetime="2020-03-05T07:24:52.000Z"  itemprop="datePublished">2020-03-05</time>
+
+            
+
+
+            
+
+        </div>
+        <div class="post-content" id="post-content" itemprop="postContent">
+            
+        </div>
+
+        <blockquote class="post-copyright">
+    
+    <footer>
+        <a href="http://www.zhushuaibing.top">
+            <img src="/img/avatar.jpg" alt="祝帅兵">
+            祝帅兵
+        </a>
+    </footer>
+</blockquote>
+
+        
+
+
+        <div class="post-footer">
+            
+	<ul class="article-tag-list" itemprop="keywords"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/" rel="tag">JavaScript</a></li></ul>
+
+
+            
+<div class="page-share-wrap">
+    
+
+<div class="page-share" id="pageShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.zhushuaibing.top/2020/03/05/JavaScript%E7%B3%BB%E5%88%97%E4%B9%8Bthis/&title=《JavaScript系列之this》 — A giser's blog.&pic=http://www.zhushuaibing.top/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zhushuaibing.top/2020/03/05/JavaScript%E7%B3%BB%E5%88%97%E4%B9%8Bthis/&title=《JavaScript系列之this》 — A giser's blog.&source=记录&思考" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zhushuaibing.top/2020/03/05/JavaScript%E7%B3%BB%E5%88%97%E4%B9%8Bthis/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript系列之this》 — A giser's blog.&url=http://www.zhushuaibing.top/2020/03/05/JavaScript%E7%B3%BB%E5%88%97%E4%B9%8Bthis/&via=http://www.zhushuaibing.top" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.zhushuaibing.top/2020/03/05/JavaScript%E7%B3%BB%E5%88%97%E4%B9%8Bthis/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+
+    <a href="javascript:;" id="shareFab" class="page-share-fab waves-effect waves-circle">
+        <i class="icon icon-share-alt icon-lg"></i>
+    </a>
+</div>
+
+
+
+        </div>
+    </div>
+
+    
+<nav class="post-nav flex-row flex-justify-between">
+  
+    <div class="waves-block waves-effect prev">
+      <a href="/2020/03/05/JavaScript%E7%B3%BB%E5%88%97%E4%B9%8B%E6%9E%84%E9%80%A0%E5%87%BD%E6%95%B0%E3%80%81%E7%B1%BB%E4%B8%8E%E5%AF%B9%E8%B1%A1/" id="post-prev" class="post-nav-link">
+        <div class="tips"><i class="icon icon-angle-left icon-lg icon-pr"></i> Prev</div>
+        <h4 class="title">JavaScript系列之构造函数、类与对象</h4>
+      </a>
+    </div>
+  
+
+  
+    <div class="waves-block waves-effect next">
+      <a href="/2020/03/05/JavaScript%E7%B3%BB%E5%88%97%E4%B9%8B%E7%BB%A7%E6%89%BF/" id="post-next" class="post-nav-link">
+        <div class="tips">Next <i class="icon icon-angle-right icon-lg icon-pl"></i></div>
+        <h4 class="title">JavaScript系列之继承</h4>
+      </a>
+    </div>
+  
+</nav>
+
+
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</article>
+
+
+
+</div>
+
+        <footer class="footer">
+    <div class="top">
+        
+
+        <p>
+            
+                <span><a href="/atom.xml" target="_blank" class="rss" title="rss"><i class="icon icon-lg icon-rss"></i></a></span>
+            
+            <span>博客内容遵循 <a rel="license noopener" href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank">知识共享 署名 - 非商业性 - 相同方式共享 4.0 国际协议</a></span>
+        </p>
+    </div>
+    <div class="bottom">
+        <p><span>祝帅兵 &copy; 2018 - 2020</span>
+            <span>
+                
+                Power by <a href="http://hexo.io/" target="_blank">Hexo</a>
+            </span>
+        </p>
+    </div>
+</footer>
+
+    </main>
+    <div class="mask" id="mask"></div>
+<a href="javascript:;" id="gotop" class="waves-effect waves-circle waves-light"><span class="icon icon-lg icon-chevron-up"></span></a>
+
+
+
+<div class="global-share" id="globalShare">
+    <ul class="reset share-icons">
+      <li>
+        <a class="weibo share-sns" target="_blank" href="http://service.weibo.com/share/share.php?url=http://www.zhushuaibing.top/2020/03/05/JavaScript%E7%B3%BB%E5%88%97%E4%B9%8Bthis/&title=《JavaScript系列之this》 — A giser's blog.&pic=http://www.zhushuaibing.top/img/avatar.jpg" data-title="微博">
+          <i class="icon icon-weibo"></i>
+        </a>
+      </li>
+      <li>
+        <a class="weixin share-sns wxFab" href="javascript:;" data-title="微信">
+          <i class="icon icon-weixin"></i>
+        </a>
+      </li>
+      <li>
+        <a class="qq share-sns" target="_blank" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zhushuaibing.top/2020/03/05/JavaScript%E7%B3%BB%E5%88%97%E4%B9%8Bthis/&title=《JavaScript系列之this》 — A giser's blog.&source=记录&思考" data-title=" QQ">
+          <i class="icon icon-qq"></i>
+        </a>
+      </li>
+      <li>
+        <a class="facebook share-sns" target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zhushuaibing.top/2020/03/05/JavaScript%E7%B3%BB%E5%88%97%E4%B9%8Bthis/" data-title=" Facebook">
+          <i class="icon icon-facebook"></i>
+        </a>
+      </li>
+      <li>
+        <a class="twitter share-sns" target="_blank" href="https://twitter.com/intent/tweet?text=《JavaScript系列之this》 — A giser's blog.&url=http://www.zhushuaibing.top/2020/03/05/JavaScript%E7%B3%BB%E5%88%97%E4%B9%8Bthis/&via=http://www.zhushuaibing.top" data-title=" Twitter">
+          <i class="icon icon-twitter"></i>
+        </a>
+      </li>
+      <li>
+        <a class="google share-sns" target="_blank" href="https://plus.google.com/share?url=http://www.zhushuaibing.top/2020/03/05/JavaScript%E7%B3%BB%E5%88%97%E4%B9%8Bthis/" data-title=" Google+">
+          <i class="icon icon-google-plus"></i>
+        </a>
+      </li>
+    </ul>
+ </div>
+
+
+<div class="page-modal wx-share" id="wxShare">
+    <a class="close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAN4AAADeCAAAAAB3DOFrAAACu0lEQVR42u3awU4jMRAE0Pz/T4PECQkyU9W2kxzenBAbZv2MZDfV/XjEz9fP8/vr39/5+8n289fvuX7DhgcPDw9vtPTr1+XLzZEJ+Ho90Rbg4eHhHeO1l0G73Pag//uv7dbg4eHhfQKvpeZLnJXpeHh4eJ/Pu150Gxkk5fIb7j08PDy8mJeEESsF9OyTL81a8PDw8CYJQNEAe+/Xx/t7eHh4eKOuenJkr2zELOwoVouHh4d3gJe0mtrQYb2MXomS604aHh4eXsmbHb5JTLDS9Go36On/goeHh3eA17avZpg2Zm2L+5utwcPDw9vKWzn6k0I8b2utjB3g4eHhvZfXBrVtnJEUzSvNuSI7wcPDw9vES66KvddDGxAXSDw8PLzDvL1NrLZYz9tpRSCCh4eHd4y3ApgtZTZ2kF8neHh4eOd4eXnaXiF5IT5rudXlNR4eHt4m3mxx662pdmArb8491vceDw8PL+blEW2+iNNjBNH9hoeHh3eANzu+k1i2jXdXIoYoa8HDw8Nb5uVF86zFNRvDajfu5jrBw8PDewkvCSNaTP6e9kK62T48PDy8rbz8j/9Z5Doblkqe6NrAw8PDO8DLD9zZFqy8rR3tevpTeHh4eFt5K1FpO0DQNrqSqDcKcPHw8PAO8NpxgbbwzTciCZGLXwkeHh7ey3l5cTwb1WpbX/lF9c9kBB4eHt4m3nrTKw9b28CijYZvrgc8PDy8Tbx2We1Q6fpn8tL8JsbFw8PDO8xrw4X8yJ7FuMPiGw8PD+8Arz5q43GB2XjBrLjf8ODh4eGVvL2BQj58kCOXim88PDy8Y7zZYMHK1dIy2oIeDw8P7xN47XHftrvycrn4KTw8PLyP4bUDW/l78o2LomE8PDy8Y7x8vGnWBmsDhV1tMzw8PLwTvF1RQrKIWcCRv3Nbfw8PDw/v/zd8AxWisYZ5BXiSAAAAAElFTkSuQmCC" alt="微信分享二维码">
+</div>
+
+
+
+
+    <script src="//cdn.bootcss.com/node-waves/0.7.4/waves.min.js"></script>
+<script>
+var BLOG = { ROOT: '/', SHARE: true, REWARD: false };
+
+
+</script>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/main.min.js"></script>
+
+
+<div class="search-panel" id="search-panel">
+    <ul class="search-result" id="search-result"></ul>
+</div>
+<template id="search-tpl">
+<li class="item">
+    <a href="{path}" class="waves-block waves-effect">
+        <div class="title ellipsis" title="{title}">{title}</div>
+        <div class="flex-row flex-middle">
+            <div class="tags ellipsis">
+                {tags}
+            </div>
+            <time class="flex-col time">{date}</time>
+        </div>
+    </a>
+</li>
+</template>
+
+<script src="//unpkg.com/hexo-theme-material-indigo@latest/js/search.min.js" async></script>
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
