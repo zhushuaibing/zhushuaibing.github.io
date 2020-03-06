@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhushuaibing.top/"/>
-  <updated>2020-03-05T08:35:30.475Z</updated>
+  <updated>2020-03-06T02:37:44.631Z</updated>
   <id>http://www.zhushuaibing.top/</id>
   
   <author>
@@ -15,6 +15,27 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>基于ArcGIS api for js+React的插件式gis框架</title>
+    <link href="http://www.zhushuaibing.top/2020/03/06/%E5%9F%BA%E4%BA%8EArcGIS-api-for-js-React%E7%9A%84%E6%8F%92%E4%BB%B6%E5%BC%8Fgis%E6%A1%86%E6%9E%B6/"/>
+    <id>http://www.zhushuaibing.top/2020/03/06/%E5%9F%BA%E4%BA%8EArcGIS-api-for-js-React%E7%9A%84%E6%8F%92%E4%BB%B6%E5%BC%8Fgis%E6%A1%86%E6%9E%B6/</id>
+    <published>2020-03-06T02:36:48.000Z</published>
+    <updated>2020-03-06T02:37:44.631Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+    
+      <category term="JavaScript" scheme="http://www.zhushuaibing.top/tags/JavaScript/"/>
+    
+      <category term="React" scheme="http://www.zhushuaibing.top/tags/React/"/>
+    
+      <category term="ArcGIS" scheme="http://www.zhushuaibing.top/tags/ArcGIS/"/>
+    
+  </entry>
   
   <entry>
     <title>重复造轮子之Router</title>
@@ -356,23 +377,6 @@
     <id>http://www.zhushuaibing.top/2020/03/05/Cesium%E7%B3%BB%E5%88%97%E4%B9%8B%E5%9D%90%E6%A0%87%E7%B3%BB/</id>
     <published>2020-03-05T07:56:19.000Z</published>
     <updated>2020-03-05T08:29:20.732Z</updated>
-    
-    <summary type="html">
-    
-    </summary>
-    
-    
-    
-      <category term="Cesium" scheme="http://www.zhushuaibing.top/tags/Cesium/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>Cesium系列之Camera</title>
-    <link href="http://www.zhushuaibing.top/2020/03/05/Cesium%E7%B3%BB%E5%88%97%E4%B9%8BCamera/"/>
-    <id>http://www.zhushuaibing.top/2020/03/05/Cesium%E7%B3%BB%E5%88%97%E4%B9%8BCamera/</id>
-    <published>2020-03-05T07:56:05.000Z</published>
-    <updated>2020-03-05T08:32:33.397Z</updated>
     
     <summary type="html">
     
