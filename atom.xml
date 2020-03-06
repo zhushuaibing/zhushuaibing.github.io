@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zhushuaibing.top/"/>
-  <updated>2020-03-06T02:37:44.631Z</updated>
+  <updated>2020-03-06T03:20:42.441Z</updated>
   <id>http://www.zhushuaibing.top/</id>
   
   <author>
@@ -21,12 +21,22 @@
     <link href="http://www.zhushuaibing.top/2020/03/06/%E5%9F%BA%E4%BA%8EArcGIS-api-for-js-React%E7%9A%84%E6%8F%92%E4%BB%B6%E5%BC%8Fgis%E6%A1%86%E6%9E%B6/"/>
     <id>http://www.zhushuaibing.top/2020/03/06/%E5%9F%BA%E4%BA%8EArcGIS-api-for-js-React%E7%9A%84%E6%8F%92%E4%BB%B6%E5%BC%8Fgis%E6%A1%86%E6%9E%B6/</id>
     <published>2020-03-06T02:36:48.000Z</published>
-    <updated>2020-03-06T02:37:44.631Z</updated>
+    <updated>2020-03-06T03:20:42.441Z</updated>
     
     <summary type="html">
     
     </summary>
     
+    
+      <category term="前端" scheme="http://www.zhushuaibing.top/categories/%E5%89%8D%E7%AB%AF/"/>
+    
+      <category term="后台" scheme="http://www.zhushuaibing.top/categories/%E5%89%8D%E7%AB%AF/%E5%90%8E%E5%8F%B0/"/>
+    
+      <category term="运维" scheme="http://www.zhushuaibing.top/categories/%E5%89%8D%E7%AB%AF/%E5%90%8E%E5%8F%B0/%E8%BF%90%E7%BB%B4/"/>
+    
+      <category term="记录" scheme="http://www.zhushuaibing.top/categories/%E5%89%8D%E7%AB%AF/%E5%90%8E%E5%8F%B0/%E8%BF%90%E7%BB%B4/%E8%AE%B0%E5%BD%95/"/>
+    
+      <category term="工具" scheme="http://www.zhushuaibing.top/categories/%E5%89%8D%E7%AB%AF/%E5%90%8E%E5%8F%B0/%E8%BF%90%E7%BB%B4/%E8%AE%B0%E5%BD%95/%E5%B7%A5%E5%85%B7/"/>
     
     
       <category term="JavaScript" scheme="http://www.zhushuaibing.top/tags/JavaScript/"/>
